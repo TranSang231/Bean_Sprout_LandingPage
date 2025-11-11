@@ -1,0 +1,35 @@
+/* Load primary and secondary fonts: Archivo (primary) and Inter (secondary) */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Inter:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global variables */
+:root{
+  --brand: #6b6bf0; /* main purple used in design */
+  --emerald: #059669;
+}
+
+/* Base typography and resets */
+html,body{height:100%}
+body{
+  /* Primary font: Archivo. Secondary: Inter */
+  font-family: 'Archivo', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin:0;
+  color:#111827; /* slate-900 */
+  font-size:16px;
+}
+
+/* Heading defaults to match design */
+h1{ @apply text-3xl md:text-4xl lg:text-5xl font-extrabold; color:var(--brand); line-height:1.1 }
+h2{ @apply text-2xl md:text-3xl lg:text-4xl font-bold; line-height:1.2 }
+h3{ @apply text-lg md:text-xl font-semibold; line-height:1.3 }
+p{ @apply text-base text-slate-600; line-height:1.7 }
+
+.container{width:90%;max-width:1100px;margin:0 auto}
+
+.btn-primary{ @apply inline-block bg-[var(--brand)] text-white px-4 py-2 rounded-md shadow }
+.btn-outline{ @apply inline-block border border-gray-200 px-4 py-2 rounded-md text-slate-700 bg-white }
+
+section{ padding-bottom:28px }
